@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.number {
+  font-size: 90px;
+  font-weight: 900;
+  position: relative;
+  display: inline-block;
+
+  /* Main gradient - light cyan to deep blue */
+  background: linear-gradient(
+    180deg,
+    #e0f7ff 0%,
+    #a8e6ff 15%,
+    #4dd4ff 35%,
+    #00b8d4 60%,
+    #0288d1 80%,
+    #01579b 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* 3D depth effect */
+  filter: drop-shadow(2px 2px 0px #006080) drop-shadow(4px 4px 0px #004860);
+}
+
+@media (max-width: 640px) {
+  .number {
+    font-size: 60px;
+  }
+}
