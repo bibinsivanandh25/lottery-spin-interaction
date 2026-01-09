@@ -1,4 +1,11 @@
 import { useEffect, useState } from 'react';
+import MainBanner from './assets/banner.png';
+import MainCounter from './assets/main-counter.png';
+import CounterHighlight from './assets/count-highlighter.png';
+import SecondaryBanner from './assets/banner-2.png';
+import Heading from './assets/title.png';
+import Base from './assets/base.png';
+import SpinBtn from './assets/btn.png';
 
 const App = () => {
   const [numbers, setNumbers] = useState([1, 2, 3, 4, 5, 6]);
@@ -53,12 +60,12 @@ const App = () => {
   return (
     <main
       className="min-h-screen w-full bg-top bg-cover bg-no-repeat relative bg-[#0B1952]"
-      style={{ backgroundImage: "url('/assets/banner.png')" }}
+      style={{ backgroundImage: `url(${MainBanner})` }}
     >
       {/* Heading Section */}
       <header className="w-full flex justify-center items-center lg:h-10vh">
         <img
-          src="/assets/title.png"
+          src={Heading}
           alt="heading-image"
           className="max-w-5xl w-full lg:h-48"
         />
@@ -69,12 +76,12 @@ const App = () => {
           <h1
             className={`tracking-wide transition-all ease-in-out ${
               animationPhase
-                ? 'text-white absolute -top-4 max-md:top-2'
-                : 'text-red-500 absolute -top-4 max-md:top-2'
-            } w-full text-center text-6xl max-md:text-4xl font-bold`}
+                ? 'text-white absolute -top-7 max-md:top-2'
+                : 'text-red-500 absolute -top-7 max-md:top-2'
+            } w-full text-center text-7xl max-md:text-4xl font-bold`}
           >
-            1<span className="text-5xl max-md:text-3xl">ST</span> P
-            <span className="text-5xl max-md:text-3xl">RIZE</span>
+            1<span className="text-6xl max-md:text-3xl">ST</span> P
+            <span className="text-6xl max-md:text-3xl">RIZE</span>
           </h1>
         </div>
       )}
@@ -89,7 +96,7 @@ const App = () => {
             >
               <div className={`relative w-full max-lg:mt-20 xl:mt-34`}>
                 <img
-                  src="/assets/main-counter.png"
+                  src={MainCounter}
                   alt="main-counter"
                   className="z-20 absolute max-md:top-0 -top-10 lg:-top-6 object-cover"
                 />
@@ -105,7 +112,7 @@ const App = () => {
         </div>
 
         <img
-          src="/assets/count-highlighter.png"
+          src={CounterHighlight}
           alt="counter-highlighter"
           className={`w-175 z-10 absolute`}
         />
@@ -113,7 +120,7 @@ const App = () => {
 
       <div className="w-full flex items-center justify-center">
         <img
-          src="/assets/banner-2.png"
+          src={SecondaryBanner}
           alt="secondary-banner"
           className="absolute bottom-38 w-full max-w-5xl
            bg-center bg-cover bg-no-repeat"
@@ -123,7 +130,7 @@ const App = () => {
       {/* Footer Section */}
       <footer className="absolute bottom-0 left-0 w-full">
         <img
-          src="/assets/base.png"
+          src={Base}
           alt="base-image"
           className="w-full object-cover relative"
         />
@@ -134,7 +141,7 @@ const App = () => {
           disabled={isSpinning}
         >
           <img
-            src="/assets/btn.png"
+            src={SpinBtn}
             alt="button-image"
             className="w-2xs h-22 object-contain"
           />
